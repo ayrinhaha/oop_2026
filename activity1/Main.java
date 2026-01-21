@@ -12,10 +12,10 @@ public class Main {
         book2.title = "Fire & Blood";
         book2.author = "George R.R. Martin";
         book1.isbn = "9781524796280";
-        book2.publicationDate = "November 20, 2018"; //without parameters
+        book2.publicationDate = "November 20, 2018"; //obj without parameters
 
         Book book3 = new Book("Atomic Habits","James Clear", "9780735211292", "October 16, 2018" );
-        Book book4 = new Book("Goldilocks and the Three Bears","Jan Brett", "9780399220333", "April 1, 1992" ); //with parameters
+        Book book4 = new Book("Goldilocks and the Three Bears","Jan Brett", "9780399220333", "April 1, 1992" ); //obj with parameters
         
         
         book1.printBookInfo();
