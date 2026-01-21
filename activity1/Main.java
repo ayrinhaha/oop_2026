@@ -13,13 +13,15 @@ public class Main {
         book2.author = "George R.R. Martin";
         book1.isbn = "9781524796280";
         book2.publicationDate = "November 20, 2018";
+
+        Book book3 = new Book("Atomic Habits","James Clear", "9780735211292", "October 16, 2018" );
+        Book book4 = new Book("Goldilocks and the Three Bears","Jan Brett", "9780399220333", "April 1, 1992" );
         
         
-        
-        
+        book1.printBookInfo();
+        book2.printBookInfo();
+        book3.printBookInfo();
+        book4.printBookInfo();
 
     }
-
-
-    
 }
