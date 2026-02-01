@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
 
         // 2.1
-        System.out.println("Total number of students: " + Student.getTotalStudents());
+        System.out.println("Initial number of students: " + Student.getTotalStudents());
         // 2.2
         Student s1 = new Student(1234, "Rasty Anne", "Gavina", "Galvan", "Female", "rastyannegalvan@gmail.com");
         Student s2 = new Student(5678, "Irene Mae", "Badua", "Pingol", "Female", "irenemae.pingol@lorma.edu");

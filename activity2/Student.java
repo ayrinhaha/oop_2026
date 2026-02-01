@@ -21,14 +21,14 @@ public class Student {
 
     // 5
     public void displayStudentInfo() {
-        System.out.println("\n ----- Student Info -----");
-        System.out.println("Student ID: " + studentId);
-        System.out.println("First name " + firstName);
-        System.out.println("Middle name: " + middleName);
-        System.out.println("Last name: " + lastName);
-        System.out.println("Gender: " + gender);
-        System.out.println("Email: " + email);
-    }
+    System.out.println("-------- STUDENT INFORMATION --------");
+    System.out.printf("%-15s: %s%n", "Student ID", studentId);
+    System.out.printf("%-15s: %s%n", "First name", firstName);
+    System.out.printf("%-15s: %s%n", "Middle name", middleName);
+    System.out.printf("%-15s: %s%n", "Last name", lastName);
+    System.out.printf("%-15s: %s%n", "Gender", gender);
+    System.out.printf("%-15s: %s%n", "Email", email);
+}
 
     // 6
     public static int getTotalStudents() {

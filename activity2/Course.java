@@ -30,11 +30,11 @@ public class Course {
 
     // 5.1
     public void displayCourseInfo() {
-        System.out.println("\n ----- Course Info -----");
-        System.out.println("School name: " + schoolName);
-        System.out.println("Course code: " + courseCode);
-        System.out.println("Course title: " + courseTitle);
-        System.out.println("Enrolled students: ");
+        System.out.println("\n-------- COURSE INFORMATION --------");
+        System.out.printf("%-15s: %s%n", "School name", schoolName);
+        System.out.printf("%-15s: %s%n", "Course code", courseCode);
+        System.out.printf("%-15s: %s%n", "Course title", courseTitle);
+        System.out.println("\nEnrolled students:\n");
 
         for (int i = 0; i < enrollmentCount; i++) {
             enrolledStudents[i].displayStudentInfo();
