@@ -3,6 +3,7 @@ import java.time.LocalDateTime;
 
 public class SecretAgent {
 
+    //fields
     private String agentId;
     private String codename;
     private int clearanceLevel;
@@ -10,12 +11,13 @@ public class SecretAgent {
     private LocalDateTime lastMissionCompletiontime;
 
 
-
+    //constructor -  parameterized
     public SecretAgent(String agentId, String codename, int clearanceLevel) {
-        onMission = false;
-        lastMissionCompletiontime = null;
+        this.onMission = false;
+        this.lastMissionCompletiontime = null;
     }
 
+    //getters
     public String getAgentId() {
         return this.agentId;
     }
@@ -36,6 +38,8 @@ public class SecretAgent {
         return this.lastMissionCompletiontime;
     }
 
+
+    //setters
     public void setCodename(String newCodename) {
         this.codename = newCodename;
     }
@@ -48,16 +52,18 @@ public class SecretAgent {
         }
     }
 
+    
+    //behavioral methods
     public void startMission() {
-        onMission = true;
+        this.onMission = true;
     }
 
     public void  completeMission() {
-        onMission = false;
+        this.onMission = false;
     }
 
     public void lastMissionCompletiontime(){
-        LocalDateTime.now();
+        this.lastMissionCompletiontime = LocalDateTime.now();
     }
 }
 
