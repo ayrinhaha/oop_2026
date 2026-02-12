@@ -18,7 +18,7 @@ public class App {
         String acctNo = sc.nextLine();
         System.out.println("Enter PIN:");
         int pin = sc.nextInt();
-        sc.nextLine(); // <-- consume leftover newline
+        sc.nextLine(); 
 
         /* 
         CHECKING IF THE ACCOUNT IS PRESENT THEN AUTHENTICATE WITH THE PIN
@@ -80,7 +80,7 @@ public class App {
         Scanner sc = new Scanner(System.in);
         System.out.print("Choice: ");
         int choice = sc.nextInt();
-        sc.nextLine(); // <-- consume leftover newline
+        sc.nextLine(); 
 
         switch (choice) {
             case 1:
@@ -102,7 +102,7 @@ public class App {
                 // withdraw amount
                 System.out.print("Enter amount to withdraw: ");
                 float withdrawAmt = sc.nextFloat();
-                sc.nextLine(); // <-- consume leftover newline
+                sc.nextLine(); 
                 if (account.withdraw(withdrawAmt)) {
                     System.out.println("Withdrawal successful. New Balance: " + account.getBalance());
                 } else {

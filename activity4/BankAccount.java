@@ -46,10 +46,10 @@ public class BankAccount {
     public boolean withdraw(float amount) {
         if (amount > 0 && balance >= amount) {
             balance -= amount;
-            return true; // success
+            return true; // for withdraw success
         } else {
             System.out.println("Error: Insufficient balance or invalid amount");
-            return false; // failure
+            return false; // for withdraw fail
         }
     }
 
