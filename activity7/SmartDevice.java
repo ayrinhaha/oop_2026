@@ -1,3 +1,4 @@
+
 public class SmartDevice {
 
     // attributes
@@ -12,12 +13,10 @@ public class SmartDevice {
 
     public void togglePower() {
         this.isOn = !this.isOn;
-        
     }
 
     public void displayStatus(){
         System.out.println("Device name: " + deviceName + "\nPower state: " + isOn);
-        
     }
 
 }

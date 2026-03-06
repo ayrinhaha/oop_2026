@@ -1,3 +1,4 @@
+
 public class Main {
     public static void main(String[] args) {
 
@@ -9,7 +10,7 @@ public class Main {
         light.setBrightness(80);
         light.displayStatus();
 
-        System.out.println("-----------------------------------");
+        System.out.println();
 
         SmartThermostat thermostat = new SmartThermostat("Main Thermostat", false);
 
