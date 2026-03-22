@@ -3,7 +3,7 @@ import java.util.GregorianCalendar;
 
 public class PrintCalendar {
 
-    /* Main method*/
+   
     public static void main(String[] args) {
 
         if (args.length != 2) {
@@ -17,20 +17,20 @@ public class PrintCalendar {
         printMonth(year, month);
     }
 
-    /* A stub for printMonth may look like this */
+    // print the full calendar 
     public static void printMonth(int year, int month) {
         printMonthTitle(year, month);
         printMonthBody(year, month);
     }
 
-    /* A stub for printMonthTitle may look like this*/
+    // print the title 
     public static void printMonthTitle(int year, int month) {
         System.out.println("\n       " + getMonthName(month) + " " + year);
         System.out.println("-----------------------------");
         System.out.println("Sun Mon Tue Wed Thu Fri Sat");
     }
 
-    /*A stub for printMonthBody may look like this */
+    // days of the month 
     public static void printMonthBody(int year, int month) {
         Calendar cal = new GregorianCalendar(year, month - 1, 1);
 
@@ -51,7 +51,7 @@ public class PrintCalendar {
         System.out.println();
     }
 
-    /* A stub for getMonthName may look like this */
+    
     public static String getMonthName(int month) {
         String[] months = {
             "January", "February", "March", "April", "May", "June",
