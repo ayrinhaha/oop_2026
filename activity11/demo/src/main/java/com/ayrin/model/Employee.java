@@ -1,10 +1,16 @@
 package com.ayrin.model;
 
-public abstract class Employee {
+import java.util.Objects;
 
+public abstract class Employee {
     private String name;
     private String employeeId;
     protected EmployeeType type;
+
+    public enum EmployeeType {
+        SALARIED,
+        HOURLY
+    }   
 
     public Employee(String name, String employeeId, EmployeeType type) {
         this.name = name;
@@ -16,31 +22,16 @@ public abstract class Employee {
 
     @Override
     public String toString() {
-        return String.format("""
-                Name: %s
-                ID: %s
-                Type: %d
-
-                    """, name, employeeId, type);
+        return String.format("Name: %s | ID: %s | Type: %s | Earnings: $%.2f", 
+                name, employeeId, type, calculateEarnings());
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this.employeeId == o) {
-            return true;
-        }
-        if (!(o instanceof Employee)) {
-            return false;
-        }
+        if (this == o) return true; 
+        if (!(o instanceof Employee)) return false; 
 
         Employee other = (Employee) o;
-        return this.employeeId.equals(other.employeeId);
-
-    }
-
-    public enum EmployeeType {
-        SALARIED,
-        HOURLY
-
+        return this.employeeId.equals(other.employeeId); 
     }
 }
