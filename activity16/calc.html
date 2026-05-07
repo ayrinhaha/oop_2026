@@ -1,40 +1,66 @@
-<!DOCTYPE html>
+<!-- index.html -->
 <html>
 
 <head>
     <title>Very Basic Calculator</title>
+
+    <style>
+        button {
+            width: 50px;
+            height: 50px;
+            margin: 2px;
+            font-size: 18px;
+            background-color: lightblue;
+        }
+
+        #output {
+            display: inline-block;
+            width: 215px;
+            height: 30px;
+            border: 1px solid black;
+            padding: 5px;
+            font-size: 24px;
+            background-color: rgb(128, 127, 127);
+        }
+    </style>
 </head>
 
 <body>
+
     <div>
         <span id="output">0</span>
     </div>
 
+    <br><br>
+
     <div>
-        <button id="btn0">0</button>
-        <button id="btn1">1</button>
-        <button id="btn2">2</button>
+        <button id="btn7">7</button>
+        <button id="btn8">8</button>
+        <button id="btn9">9</button>
+        <button id="btnPlus">+</button>
     </div>
 
     <div>
-        <button id="btn3">3</button>
         <button id="btn4">4</button>
         <button id="btn5">5</button>
-    </div>
-    <div>
         <button id="btn6">6</button>
-        <button id="btn7">7</button>
-        <button id="btn8">8</button>
+        <button id="btnMinus">-</button>
     </div>
+
     <div>
-        <button id="btn9">9</button>
-        <button id="btnplus">+</button>
-        <button id="btnminus">-</button>
-        <button id="btnequal">=</button>
+        <button id="btn1">1</button>
+        <button id="btn2">2</button>
+        <button id="btn3">3</button>
+        <button id="btnEqual">=</button>
     </div>
+
+    <div>
+        <button id="btn0">0</button>
+        <button id="btnClear">C</button>
     </div>
 
     <script src="app.js"></script>
+
 </body>
 
 </html>

@@ -1,58 +1,108 @@
 const outputBox = document.getElementById("output");
 
 let operands = [];
-let operators = [];
 let currentOperand = "";
+let operator = "+";
 
 const processNumClick = (num) => {
     currentOperand += num;
     outputBox.textContent = currentOperand;
 };
 
-for (let i = 0; i <= 9; i++) {
-    document.getElementById(`btn${i}`).addEventListener("click", () => {
-        processNumClick(i);
-    });
-}
+// number buttons
+document.getElementById("btn0").addEventListener("click", () => {
+    processNumClick(0);
+});
 
-document.getElementById("btnminus").addEventListener("click", () => {
+document.getElementById("btn1").addEventListener("click", () => {
+    processNumClick(1);
+});
+
+document.getElementById("btn2").addEventListener("click", () => {
+    processNumClick(2);
+});
+
+document.getElementById("btn3").addEventListener("click", () => {
+    processNumClick(3);
+});
+
+document.getElementById("btn4").addEventListener("click", () => {
+    processNumClick(4);
+});
+
+document.getElementById("btn5").addEventListener("click", () => {
+    processNumClick(5);
+});
+
+document.getElementById("btn6").addEventListener("click", () => {
+    processNumClick(6);
+});
+
+document.getElementById("btn7").addEventListener("click", () => {
+    processNumClick(7);
+});
+
+document.getElementById("btn8").addEventListener("click", () => {
+    processNumClick(8);
+});
+
+document.getElementById("btn9").addEventListener("click", () => {
+    processNumClick(9);
+});
+
+// plus button
+document.getElementById("btnPlus").addEventListener("click", () => {
     if (currentOperand !== "") {
         operands.push(parseFloat(currentOperand));
-        operators.push("-");
+
+        outputBox.textContent += " + ";
+
         currentOperand = "";
-        outputBox.textContent = "-";
+        operator = "+";
     }
 });
 
-document.getElementById("btnplus").addEventListener("click", () => {
+// minus button
+document.getElementById("btnMinus").addEventListener("click", () => {
     if (currentOperand !== "") {
         operands.push(parseFloat(currentOperand));
-        operators.push("+");
+
+        outputBox.textContent += " - ";
+
         currentOperand = "";
-        outputBox.textContent = "+";
+        operator = "-";
     }
 });
 
-document.getElementById("btnequal").addEventListener("click", () => {
+// equal button
+document.getElementById("btnEqual").addEventListener("click", () => {
+
     if (currentOperand !== "") {
         operands.push(parseFloat(currentOperand));
         currentOperand = "";
     }
 
-    if (operands.length === 0) return;
-
-    let total = operands[0];
+    let result = operands[0];
 
     for (let i = 1; i < operands.length; i++) {
-        if (operators[i - 1] === "+") {
-            total += operands[i];
-        } else if (operators[i - 1] === "-") {
-            total -= operands[i];
+
+        if (operator === "+") {
+            result += operands[i];
+        }
+
+        if (operator === "-") {
+            result -= operands[i];
         }
     }
 
-    outputBox.textContent = total;
+    outputBox.textContent = result;
 
     operands = [];
-    operators = [];
+});
+
+// clear button (c)
+document.getElementById("btnClear").addEventListener("click", () => {
+    operands = [];
+    currentOperand = "";
+    outputBox.textContent = 0;
 });
