@@ -30,7 +30,6 @@ class PersonalTask extends Task {
             </button>
         `;
 
-        // only added logic (no structure change)
         const btn = item.querySelector(".btn-toggle");
 
         btn.addEventListener("click", () => {
